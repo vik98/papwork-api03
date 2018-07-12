@@ -1,0 +1,21 @@
+<html>
+    <head>
+    <title>
+       Forms Page
+    </title>
+    </head>
+    <body>
+        <h1>This is the forms page</h1>
+        <%for(var i=0;i<data.length;i++){%>
+            <h3>The forms has a user with id <%=data[i].userID%></h3>
+            <h3>The forms has id <%=data[i]._id%></h3>
+            <h3>The forms has a name <%=data[i].formName%></h3>
+            <h3>The forms has data <%=data[i].date%></h3>
+            <h3>The forms has the below questions </h3>
+            <%for(var j=0;j<data[i].pages.length;j++){%>
+                <h3><%=data[i].pages[j].question[1].typedQuestion%></h3>
+                
+            <%}%>    
+        <%}%>   
+    </body>
+</html>
